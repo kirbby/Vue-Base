@@ -39,7 +39,7 @@ module.exports = {
                 allowTemplateLiterals: true,
             },
         ],
-        "self-closing-comp": "off",
+        "vue/html-self-closing": "off",
         "tailwindcss/no-custom-classname": 0,
         "import/order": [
             "error",
