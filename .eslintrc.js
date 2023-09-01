@@ -39,7 +39,7 @@ module.exports = {
                 allowTemplateLiterals: true,
             },
         ],
-        "self-closing-tags": true,
+        "self-closing-comp": "off",
         "tailwindcss/no-custom-classname": 0,
         "import/order": [
             "error",
