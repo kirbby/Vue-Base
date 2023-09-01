@@ -3,12 +3,7 @@ module.exports = {
     env: {
         node: true,
     },
-    plugins: [
-        "es-beautifier",
-        "prettier",
-        "tailwindcss",
-        "import",
-    ],
+    plugins: ["es-beautifier", "prettier", "tailwindcss", "import"],
     extends: [
         "plugin:vue/vue3-recommended",
         "plugin:es-beautifier/standard",
@@ -18,7 +13,7 @@ module.exports = {
         "plugin:import/typescript",
     ],
     parserOptions: {
-        ecmaVersion: 2022,
+        ecmaVersion: "latest",
         parser: "@typescript-eslint/parser",
     },
     ignorePatterns: [
@@ -32,11 +27,11 @@ module.exports = {
         "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
         "comma-dangle": ["error", "only-multiline"],
         "linebreak-style": "off",
-        "indent": ["error", 4],
-        "vue/script-indent": ["off", 4, { "baseIndent": 0 }],
-        "vue/html-indent": ["error", 4, { "baseIndent": 0 }],
-        "semi": [2, "always"],
-        "quotes": [
+        indent: ["error", 4],
+        "vue/script-indent": ["off", 4, { baseIndent: 0 }],
+        "vue/html-indent": ["error", 4, { baseIndent: 0 }],
+        semi: [2, "always"],
+        quotes: [
             2,
             "double",
             {
@@ -44,17 +39,18 @@ module.exports = {
                 allowTemplateLiterals: true,
             },
         ],
+        "self-closing-tags": true,
         "tailwindcss/no-custom-classname": 0,
         "import/order": [
             "error",
             {
-                "groups": [
+                groups: [
                     "builtin",
                     "external",
                     "internal",
                     "parent",
                     "sibling",
-                    "index"
+                    "index",
                 ],
                 "newlines-between": "never",
             },
@@ -81,23 +77,24 @@ module.exports = {
                 "import/order": [
                     "error",
                     {
-                        "groups": [
+                        groups: [
                             "builtin",
                             "external",
                             "internal",
                             "parent",
                             "sibling",
-                            "index"
-                        ]
-                    }],
-                "import/newline-after-import": "error"
-            }
-        }
+                            "index",
+                        ],
+                    },
+                ],
+                "import/newline-after-import": "error",
+            },
+        },
     ],
     settings: {
         "import/resolver": {
-            "node": true,
-            "typescript": true,
+            node: true,
+            typescript: true,
         },
     },
 };
