@@ -63,6 +63,8 @@ module.exports = {
             { blankLine: "always", prev: "if", next: "*" },
             { blankLine: "always", prev: "*", next: "if" },
         ],
+        curly: ["error", "all"],
+        "brace-style": ["error", "1tbs", { allowSingleLine: false }],
     },
     overrides: [
         {
